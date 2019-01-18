@@ -2,7 +2,7 @@ const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
 const StarWarsCharacters = function () {
-  this.data = []
+  this.data = [];
 }
 
 StarWarsCharacters.prototype.getData = function () {
@@ -21,6 +21,7 @@ StarWarsCharacters.prototype.getData = function () {
     console.error(err);
   });
 };
+
 
 StarWarsCharacters.prototype.handleData = function (charactersData) {
     this.data.push(charactersData)
