@@ -1,4 +1,4 @@
-const Topic = require('./models/topic.js');
+const StarWarsCharacters = require('./models/StarWarsCharacters.js');
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');

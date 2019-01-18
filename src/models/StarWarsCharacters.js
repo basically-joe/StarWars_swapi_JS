@@ -1,8 +1,8 @@
 const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
-const Topic = function () {
-  
+const StarWarsCharacters = function () {
+
 }
 
-module.exports = Topic;
+module.exports = StarWarsCharacters;
