@@ -11,11 +11,15 @@ StarWarsCharacters.prototype.getData = function () {
 
   const myPromise = request.get();
   myPromise.then((data) => {
-    PubSub.publish('StarWarsCharacters:character-data-loaded', this.data);
+    PubSub.publish('StarWarsCharacters:characters-data-loaded', data);
+    console.log(data);
   })
   .catch((err) =>{
     console.error(err);
+
   });
 };
+
+
 
 module.exports = StarWarsCharacters;
