@@ -14,7 +14,7 @@ StarWarsCharacters.prototype.getData = function () {
     this.handleData(data);
     PubSub.publish('StarWarsCharacters:characters-data-loaded', this.data);
 
-    // console.log(data);
+    console.log(this.data);
 
   })
   .catch((err) =>{
@@ -22,10 +22,39 @@ StarWarsCharacters.prototype.getData = function () {
   });
 };
 
-
 StarWarsCharacters.prototype.handleData = function (charactersData) {
-    this.data.push(charactersData)
+    this.data.push(charactersData.results)
 };
 
+///////////////////
+
+// StarWarsCharacters.prototype.handleData = function (characters) {
+//
+//   const characterNames = this.getNames(characters);
+//   const characterHeights = this.getHeights(characters);
+//
+//   for (let i=0; i<characterNames.length; i++){
+//    let individualcharacter = {
+//       name: characterNames[i],
+//       height: characterHeights[i]
+//     }
+//     this.data.push(individualcharacter);
+//   }
+// };
+//
+// StarWarsCharacters.prototype.getNames = function (characters) {
+//   return characters
+//   .map(character => character.name)
+//
+//
+// };
+//
+//
+// StarWarsCharacters.prototype.getHeights = function (characters) {
+//   return characters
+//   .map(character => character.height);
+// };
+
+//////////////////////////
 
 module.exports = StarWarsCharacters;

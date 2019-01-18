@@ -9,7 +9,7 @@ const ContainerView = function (container) {
 ContainerView.prototype.bindEvents = function () {
   PubSub.subscribe("StarWarsCharacters:characters-data-loaded", (event) => {
     this.characters = event.detail;
-    // console.log(`I'm logging the container: ${this.characters}`);
+    console.log(`I'm logging the container: ${event.detail}`);
     this.render();
   })
 };
@@ -19,9 +19,9 @@ ContainerView.prototype.render = function () {
   this.characters.forEach((character) => {
     const characterView = new StarWarsCharacterView(this.container, character);
     characterView.render();
-    debugger;
+    // debugger;
   })
-
 };
+
 
 module.exports = ContainerView;
