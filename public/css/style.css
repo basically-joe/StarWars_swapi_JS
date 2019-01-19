@@ -3,9 +3,13 @@ header {
   color: #414141;
 }
 
+html {
+  background-color: black;
+}
+
 .male {
   border-style: solid;
-  color: #414141;
+  color: white;
   text-align: center;
   padding: 10px;
   border-radius: 8px;
@@ -14,11 +18,12 @@ header {
   justify-content: space-between;
   margin: 5px;
   background-color: #004EFF;
+  opacity: 0.7;
 }
 
 .female {
   border-style: solid;
-  color: #414141;
+  color: white;
   text-align: center;
   padding: 10px;
   border-radius: 8px;
@@ -26,12 +31,13 @@ header {
   flex-direction: column;
   justify-content: space-between;
   margin: 5px;
-  background-color: #407BFF;
+  background-color: #38379F;
+  opacity: 0.7;
 }
 
 div {
   border-style: solid;
-  color: #414141;
+  color: white;
   text-align: center;
   padding: 10px;
   border-radius: 8px;
@@ -39,7 +45,8 @@ div {
   flex-direction: column;
   justify-content: space-between;
   margin: 5px;
-  background-color: #C58A00;
+  background-color: #F8DF01;
+  opacity: 0.7;
 }
 
 #star-wars-characters-section {
@@ -55,13 +62,21 @@ ul {
 #loading {
   position: fixed;
   top: 50%;
-  left: 50%
+  left: 50%;
+  opacity: 1;
+}
+
+#load_screen, #loading {
+  background-color: white;
+  border: none;
+  opacity: 1;
 }
 
 /* Select */
 
 body {
   background: #ffffff;
+  background-color: black;
   color: #414141;
   font-family: 'Lato', sans-serif;
 }
@@ -75,6 +90,7 @@ body {
   border-style: solid;
   border-radius: 3px;
   background-color: white;
+  opacity: 1;
 }
 
 .select,
@@ -115,4 +131,12 @@ body {
   top: 0;
   padding: 5px 15px;
   border-left: 5px solid #fff;
+}
+
+h2 {
+  opacity: 1;
+}
+
+ul, li {
+  opacity: 1;
 }
