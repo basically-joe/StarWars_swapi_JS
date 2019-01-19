@@ -2,7 +2,6 @@ const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
 const StarWarsCharacters = function () {
-  // this.data = [];
 };
 
 StarWarsCharacters.prototype.getData = function () {
@@ -29,8 +28,6 @@ StarWarsCharacters.prototype.getData = function () {
 
 };
 
-
-
 /// selector
 
 StarWarsCharacters.prototype.newSelection = function (gender, dataResults) {
@@ -43,17 +40,8 @@ StarWarsCharacters.prototype.newSelection = function (gender, dataResults) {
       return character;
     }
   })
-console.log(`Found characters are: ${foundCharacters}`);
+  console.log(`Found characters are: ${foundCharacters}`);
   PubSub.publish('Models:new-selection-made', foundCharacters);
 };
-
-// StarWarsCharacters.prototype.handleData = function (data) {
-//   this.data.push(data);
-// };
-
-
-
-///
-
 
 module.exports = StarWarsCharacters;

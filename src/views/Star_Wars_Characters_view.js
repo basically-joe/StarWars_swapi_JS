@@ -9,7 +9,7 @@ StarWarsCharacterView.prototype.render = function () {
   // console.log(this.charactersData);
 
   const characterContainer = document.createElement('div');
-  characterContainer.classList.add("character-container");
+  characterContainer.classList.add(`${this.charactersData.gender}`);
 
   const characterName = this.createHeadingElement();
   characterContainer.appendChild(characterName);

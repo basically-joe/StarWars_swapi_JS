@@ -3,7 +3,7 @@ header {
   color: #414141;
 }
 
-.character-container {
+.male {
   border-style: solid;
   color: #414141;
   text-align: center;
@@ -13,6 +13,33 @@ header {
   flex-direction: column;
   justify-content: space-between;
   margin: 5px;
+  background-color: #004EFF;
+}
+
+.female {
+  border-style: solid;
+  color: #414141;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5px;
+  background-color: #407BFF;
+}
+
+div {
+  border-style: solid;
+  color: #414141;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5px;
+  background-color: #C58A00;
 }
 
 #star-wars-characters-section {
@@ -47,6 +74,7 @@ body {
   width: 100%;
   border-style: solid;
   border-radius: 3px;
+  background-color: white;
 }
 
 .select,
