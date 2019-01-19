@@ -15,7 +15,7 @@ SelectView.prototype.bindEvents = function () {
 
   this.element.addEventListener('change', (event) =>{
     const selectedGender = event.target.value;
-    PubSub.publish('SelectView:Region-selected', selectedGender);
+    PubSub.publish('SelectView:Gender-selected', selectedGender);
   })
 };
 

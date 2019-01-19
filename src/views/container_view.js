@@ -10,7 +10,7 @@ ContainerView.prototype.bindEvents = function () {
 
   PubSub.subscribe("StarWarsCharacters:characters-data-loaded", (event) => {
     this.characters = event.detail;
-    console.log(`I'm logging the container: ${event.detail}`);
+    // console.log(`I'm logging the container: ${event.detail}`);
     this.render();
   })
 
