@@ -2,7 +2,7 @@ const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
 const StarWarsCharacters = function () {
-  // this.data = data.results;
+
 }
 
 StarWarsCharacters.prototype.getData = function () {
@@ -12,12 +12,26 @@ StarWarsCharacters.prototype.getData = function () {
   const myPromise = request.get();
   myPromise.then((data) => {
     PubSub.publish('StarWarsCharacters:characters-data-loaded', data.results);
+    // PubSub.subscribe('SelectView:Gender-selected', (event) =>{
+//   console.log(event);
+//   this.newSelection(event.detail)
+// })
   })
   .catch((err) =>{
     console.error(err);
   });
 };
 
+// StarWarsCharacters.prototype.newSelection = function (gender) {
+//   const wantedGender = gender;
+//   const foundGenders = data.results.filter((gender) => {
+//     if (data.results.gender === wantedGender) {
+//       return gender;
+//     }
+//   })
+//
+//   PubSub.publish('Models:new-selection-made', foundGenders);
+// };
 
 
 module.exports = StarWarsCharacters;
