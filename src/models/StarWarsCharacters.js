@@ -15,10 +15,10 @@ StarWarsCharacters.prototype.getData = function () {
 
   /// selector
 
-    // PubSub.subscribe('SelectView:Gender-selected', (event) =>{
-//   console.log(event);
-//   this.newSelection(event.detail)
-// })
+    PubSub.subscribe('SelectView:Gender-selected', (event) =>{
+  console.log(event);
+  this.newSelection(event.detail)
+})
 
 ///
 
@@ -30,16 +30,16 @@ StarWarsCharacters.prototype.getData = function () {
 
   /// selector
 
-// StarWarsCharacters.prototype.newSelection = function (gender) {
-//   const wantedGender = gender;
-//   const foundGenders = data.results.filter((gender) => {
-//     if (data.results.gender === wantedGender) {
-//       return gender;
-//     }
-//   })
-//
-//   PubSub.publish('Models:new-selection-made', foundGenders);
-// };
+StarWarsCharacters.prototype.newSelection = function (gender) {
+  const wantedGender = gender;
+  const foundGenders = data.results.filter((gender) => {
+    if (data.results.gender === wantedGender) {
+      return gender;
+    }
+  })
+
+  PubSub.publish('Models:new-selection-made', foundGenders);
+};
 
 ///
 

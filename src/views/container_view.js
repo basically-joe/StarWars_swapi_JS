@@ -16,10 +16,10 @@ ContainerView.prototype.bindEvents = function () {
 
     /// selector
 
-  // PubSub.subscribe('Models:new-selection-made', (event) => {
-  //     this.characters = event.detail;
-  //     this.render();
-  //   })
+  PubSub.subscribe('Models:new-selection-made', (event) => {
+      this.characters = event.detail;
+      this.render();
+    })
 
   ///
 
