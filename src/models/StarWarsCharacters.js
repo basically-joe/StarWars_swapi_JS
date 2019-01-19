@@ -13,12 +13,11 @@ StarWarsCharacters.prototype.getData = function () {
   myPromise.then((data) => {
     // this.handleData(data.results);
     PubSub.publish('StarWarsCharacters:characters-data-loaded', data.results);
-
+    console.log(`Data results are: ${data.results}`);
     /// selector
 
     PubSub.subscribe('SelectView:Gender-selected', (event) =>{
       // console.log(event);
-      console.log(`Data results are: ${data.results}`);
       this.newSelection(event.detail, data.results)
       // console.log(data.results);
     })
@@ -38,13 +37,13 @@ StarWarsCharacters.prototype.newSelection = function (gender, dataResults) {
   // console.log(`dataResult equals: ${dataResults}`);
   const wantedGender = gender;
   // debugger;
-  const foundCharacters = dataResults.filter((gender) => {
+  const foundCharacters = dataResults.filter((character) => {
     // debugger;
-    if (dataResults.gender === wantedGender) {
+    if (character.gender === wantedGender) {
       return character;
     }
   })
-
+console.log(`Found characters are: ${foundCharacters}`);
   PubSub.publish('Models:new-selection-made', foundCharacters);
 };
 
