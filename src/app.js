@@ -21,4 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const starWarsCharacters = new StarWarsCharacters;
   starWarsCharacters.getData();
 
+
+
+});
+
+document.addEventListener('load', function() {
+  var load_screen = document.getElementByID("#load_screen");
+  document.body.removeChild(load_screen);
 });
