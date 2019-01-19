@@ -12,15 +12,23 @@ StarWarsCharacters.prototype.getData = function () {
   const myPromise = request.get();
   myPromise.then((data) => {
     PubSub.publish('StarWarsCharacters:characters-data-loaded', data.results);
+
+  /// selector
+
     // PubSub.subscribe('SelectView:Gender-selected', (event) =>{
 //   console.log(event);
 //   this.newSelection(event.detail)
 // })
+
+///
+
   })
   .catch((err) =>{
     console.error(err);
   });
 };
+
+  /// selector
 
 // StarWarsCharacters.prototype.newSelection = function (gender) {
 //   const wantedGender = gender;
@@ -32,6 +40,8 @@ StarWarsCharacters.prototype.getData = function () {
 //
 //   PubSub.publish('Models:new-selection-made', foundGenders);
 // };
+
+///
 
 
 module.exports = StarWarsCharacters;
