@@ -1,0 +1,26 @@
+header {
+  border-style: solid;
+  color: black;
+  text-align: center
+}
+
+.character-container {
+  border-style: solid;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#star-wars-characters-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+ul {
+  list-style: none;
+}
