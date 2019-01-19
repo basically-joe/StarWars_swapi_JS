@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Star Wars Characters</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
   <script src="js/bundle.js">
   </script>
@@ -12,9 +14,12 @@
   <header>
     <h1>Star Wars Characters</h1>
   </header>
-  <select id="star-wars-character-select">
+  <div class="select-box">
+    <label for="select-box1" class="label select-box1"><span class="label-desc">Select gender</span> </label>
+  <select id="star-wars-character-select" class="select">
     <option id="star-wars-character-option"></option>
   </select>
+</div>
   <section id='star-wars-characters-section'>
     <div id="load_screen"><div id="loading"><img src="img/spinner2.gif" alt="Loading page"></div></div>
   </section>

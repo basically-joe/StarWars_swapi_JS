@@ -18,6 +18,7 @@ StarWarsCharacters.prototype.getData = function () {
 
     PubSub.subscribe('SelectView:Gender-selected', (event) =>{
       // console.log(event);
+      console.log(`Data results are: ${data.results}`);
       this.newSelection(event.detail, data.results)
       // console.log(data.results);
     })

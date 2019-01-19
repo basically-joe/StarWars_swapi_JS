@@ -1,18 +1,18 @@
 header {
-  border-style: solid;
-  color: black;
-  text-align: center
+  text-align: center;
+  color: #414141;
 }
 
 .character-container {
   border-style: solid;
-  color: black;
+  color: #414141;
   text-align: center;
   padding: 10px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 5px;
 }
 
 #star-wars-characters-section {
@@ -29,4 +29,62 @@ ul {
   position: fixed;
   top: 50%;
   left: 50%
+}
+
+/* Select */
+
+body {
+  background: #ffffff;
+  color: #414141;
+  font-family: 'Lato', sans-serif;
+}
+
+.select-box {
+  cursor: pointer;
+  position : relative;
+  max-width:  20em;
+  margin: 5em auto;
+  width: 100%;
+  border-style: solid;
+  border-radius: 3px;
+}
+
+.select,
+.label {
+  color: #414141;
+  display: block;
+  font-family: 'Lato', sans-serif;
+}
+
+.select {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 5px 0;
+  height: 40px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  background: none transparent;
+  border: 0 none;
+}
+.star-wars-character-select {
+  background: #ececec;
+}
+
+.label {
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.open .label::after {
+  content: "▲";
+}
+.label::after {
+  content: "▼";
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px 15px;
+  border-left: 5px solid #fff;
 }
