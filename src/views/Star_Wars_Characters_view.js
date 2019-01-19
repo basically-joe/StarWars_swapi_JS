@@ -20,6 +20,12 @@ StarWarsCharacterView.prototype.render = function () {
   const characterHeight = this.createHeightElement();
   detailList.appendChild(characterHeight)
 
+  const characterMass = this.createMassElement();
+  detailList.appendChild(characterMass)
+
+  const characterGender = this.createGenderElement();
+  detailList.appendChild(characterGender)
+
   this.characterContainer.appendChild(characterContainer);
 
 
@@ -40,8 +46,20 @@ StarWarsCharacterView.prototype.createListElement = function () {
 
 StarWarsCharacterView.prototype.createHeightElement = function () {
   const height = document.createElement('li');
-  height.textContent = this.charactersData.height;
+  height.textContent = `Height: ${this.charactersData.height}`;
   return height;
+};
+
+StarWarsCharacterView.prototype.createMassElement = function () {
+  const mass = document.createElement('li');
+  mass.textContent = `Mass: ${this.charactersData.mass}`;
+  return mass;
+};
+
+StarWarsCharacterView.prototype.createGenderElement = function () {
+  const gender = document.createElement('li');
+  gender.textContent = `Gender: ${this.charactersData.gender}`;
+  return gender;
 };
 
 module.exports = StarWarsCharacterView;
