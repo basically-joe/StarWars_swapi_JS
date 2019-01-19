@@ -2,7 +2,7 @@ const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
 const StarWarsCharacters = function () {
-  this.data = [];
+  // this.data = data.results;
 }
 
 StarWarsCharacters.prototype.getData = function () {
@@ -11,10 +11,11 @@ StarWarsCharacters.prototype.getData = function () {
 
   const myPromise = request.get();
   myPromise.then((data) => {
-    this.handleData(data);
-    PubSub.publish('StarWarsCharacters:characters-data-loaded', this.data);
-
+    // this.handleData(data);
     console.log(this.data);
+    PubSub.publish('StarWarsCharacters:characters-data-loaded', data.results);
+
+
 
   })
   .catch((err) =>{
@@ -22,9 +23,9 @@ StarWarsCharacters.prototype.getData = function () {
   });
 };
 
-StarWarsCharacters.prototype.handleData = function (charactersData) {
-    this.data.push(charactersData.results)
-};
+// StarWarsCharacters.prototype.handleData = function (charactersData) {
+//     this.data.push(charactersData.results)
+// };
 
 ///////////////////
 

@@ -15,11 +15,12 @@ ContainerView.prototype.bindEvents = function () {
 };
 
 ContainerView.prototype.render = function () {
-  this.container.innerHTML = '';
+  // this.container.innerHTML = '';
   this.characters.forEach((character) => {
+    // debugger;
     const characterView = new StarWarsCharacterView(this.container, character);
     characterView.render();
-    // debugger;
+
   })
 };
 
